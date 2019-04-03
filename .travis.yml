@@ -16,11 +16,16 @@ before_install:
 after_success:
 - mvn clean test coveralls:report
 deploy:
-  provider: script
-  script: mvn deploy
-  skip_cleanup: true
-  on:
-    branch: master
+  - provider: script
+    script: mvn deploy
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: mvn deploy
+    skip_cleanup: true
+    on:
+      tags: true
 notifications:
   email: false
   slack:
