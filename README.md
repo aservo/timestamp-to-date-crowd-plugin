@@ -10,6 +10,6 @@ Timestamp-to-Date for Crowd
 
 Translates timestamp values in input fields (e.g. user attributes) to a date in Atlassian Crowd.
 
-![preview](images/preview.png "Timestamp-to-date translation")
+![preview](.preview.png "Timestamp-to-date translation")
 
 That's all! 🤷‍
