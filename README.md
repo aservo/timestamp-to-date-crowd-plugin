@@ -8,6 +8,8 @@ Timestamp-to-Date for Crowd
 [![Coverage Status](https://coveralls.io/repos/github/aservo/crowd-timestamp-to-date-plugin/badge.svg?branch=master)](https://coveralls.io/github/aservo/crowd-timestamp-to-date-plugin?branch=master)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-Converts timestamp values in input fields (e.g. user attributes) to a date in Atlassian Crowd.
+Translates timestamp values in input fields (e.g. user attributes) to a date in Atlassian Crowd.
+
+![preview](images/preview.png "Timestamp-to-date translation")
 
 That's all! 🤷‍

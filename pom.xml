@@ -18,7 +18,7 @@
     <packaging>atlassian-plugin</packaging>
 
     <name>Timestamp-to-Date for Atlassian Crowd</name>
-    <description>Converts Timestamp Values in User Attribute Input Fields to a Date in Atlassian Crowd.</description>
+    <description>Translates timestamp values in input fields (e.g. user attributes) to a date in Atlassian Crowd.</description>
     <url>https://github.com/aservo/crowd-timestamp-to-date-plugin</url>
 
     <licenses>
