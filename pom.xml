@@ -9,12 +9,12 @@
     <parent>
         <groupId>de.aservo</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.6</version>
     </parent>
 
     <groupId>de.aservo.atlassian</groupId>
     <artifactId>crowd-timestamp-to-date-plugin</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>atlassian-plugin</packaging>
 
     <name>Timestamp-to-Date for Atlassian Crowd</name>
@@ -23,8 +23,9 @@
 
     <licenses>
         <license>
-            <name>BSD 3-Clause License</name>
-            <url>https://opensource.org/licenses/BSD-3-Clause</url>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
         </license>
     </licenses>
 
@@ -109,7 +110,6 @@
                     <productDataVersion>${crowd.data.version}</productDataVersion>
                     <allowGoogleTracking>false</allowGoogleTracking>
                     <enableQuickReload>true</enableQuickReload>
-
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
                     <instructions>
