@@ -9,12 +9,12 @@
     <parent>
         <groupId>de.aservo</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>0.0.6</version>
+        <version>0.0.9</version>
     </parent>
 
     <groupId>de.aservo.atlassian</groupId>
     <artifactId>crowd-timestamp-to-date-plugin</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <packaging>atlassian-plugin</packaging>
 
     <name>Timestamp-to-Date for Atlassian Crowd</name>
@@ -51,17 +51,11 @@
     </developers>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <crowd.version>3.3.3</crowd.version>
-        <crowd.data.version>3.3.3</crowd.data.version>
-        <amps.version>8.0.0</amps.version>
-        <atlassian.spring.scanner.version>1.2.13</atlassian.spring.scanner.version>
-        <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
-        <!-- This property ensures consistency between the key in atlassian-plugin.xml and the OSGi bundle's key. -->
+        <crowd.version>4.0.0</crowd.version>
+        <amps.version>8.0.2</amps.version>
         <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
+        <atlassian.spring.scanner.version>2.1.11</atlassian.spring.scanner.version>
+        <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
     </properties>
 
     <dependencyManagement>
@@ -80,15 +74,7 @@
         <dependency>
             <groupId>com.atlassian.plugin</groupId>
             <artifactId>atlassian-spring-scanner-annotation</artifactId>
-            <version>${atlassian.spring.scanner.version}</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.atlassian.plugin</groupId>
-            <artifactId>atlassian-spring-scanner-runtime</artifactId>
-            <version>${atlassian.spring.scanner.version}</version>
-            <scope>runtime</scope>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -107,7 +93,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <productVersion>${crowd.version}</productVersion>
-                    <productDataVersion>${crowd.data.version}</productDataVersion>
+                    <productDataVersion>${crowd.version}</productDataVersion>
                     <allowGoogleTracking>false</allowGoogleTracking>
                     <enableQuickReload>true</enableQuickReload>
                     <!-- See here for an explanation of default instructions: -->

@@ -8,8 +8,8 @@
     </plugin-info>
 
     <web-resource key="crowd-timestamp-to-date-plugin-resources" name="crowd-timestamp-to-date-plugin Web Resources">
-        <resource type="download" name="timestamp-to-date.js" location="js/crowd-timestamp-to-date-plugin.js"/>
         <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="timestamp-to-date-plugin.js" location="js/crowd-timestamp-to-date-plugin.js"/>
         <context>atl.admin</context>
     </web-resource>
 </atlassian-plugin>
