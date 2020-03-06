@@ -19,19 +19,11 @@ AJS.$(document).ready(function () {
         var date = parseTimestampValue(element);
 
         if (date) {
-            AJS.InlineDialog(element, "dateDialog" + i,
-                function(content, trigger, showPopup) {
-                    var date = parseTimestampValue(element);
-
-                    content.css({"padding":"20px","color":"#000"}).html('<p>' + date + '</p>');
-                    showPopup();
-                    return false;
-                },{
-                    onHover: true,
-                    closeOnTriggerClick: true,
-                    hideDelay: 0
+            element.tooltip({
+                title: function () {
+                    return parseTimestampValue(element);
                 }
-            );
+            });
         }
     });
 });
