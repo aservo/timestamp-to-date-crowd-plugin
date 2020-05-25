@@ -3,8 +3,8 @@
 Timestamp-to-Date for Crowd
 ===========================
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.aservo.atlassian/crowd-timestamp-to-date-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.aservo.atlassian/crowd-timestamp-to-date-plugin)
-[![Build Status](https://circleci.com/gh/aservo/crowd-timestamp-to-date-plugin.svg?style=shield)](https://circleci.com/gh/aservo/crowd-timestamp-to-date-plugin)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.aservo.atlassian/timestamp-to-date-crowd-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.aservo.atlassian/timestamp-to-date-crowd-plugin)
+[![Build Status](https://circleci.com/gh/aservo/timestamp-to-date-crowd-plugin.svg?style=shield)](https://circleci.com/gh/aservo/timestamp-to-date-crowd-plugin)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Translates timestamp values in input fields (e.g. user attributes) to a date in Atlassian Crowd.

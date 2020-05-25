@@ -3,8 +3,10 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/aservo.png</param>
-        <param name="plugin-logo">images/aservo.png</param>
+        <param name="vendor-logo">images/aservo.png</param>
+        <param name="plugin-icon">images/plugin-icon</param>
+        <param name="plugin-logo">images/plugin-logo.jpg</param>
+        <!--<param name="plugin-banner">images/plugin-banner.jpg</param>-->
     </plugin-info>
 
     <web-resource key="timestamp-to-date-resources" name="Timestamp-to-Date Web Resources">
