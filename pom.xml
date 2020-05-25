@@ -12,14 +12,13 @@
         <version>0.0.9</version>
     </parent>
 
-    <groupId>de.aservo.atlassian</groupId>
-    <artifactId>crowd-timestamp-to-date-plugin</artifactId>
-    <version>0.0.2</version>
+    <artifactId>timestamp-to-date-crowd-plugin</artifactId>
+    <version>0.0.3</version>
     <packaging>atlassian-plugin</packaging>
 
-    <name>Timestamp-to-Date for Atlassian Crowd</name>
-    <description>Translates timestamp values in input fields (e.g. user attributes) to a date in Atlassian Crowd.</description>
-    <url>https://github.com/aservo/crowd-timestamp-to-date-plugin</url>
+    <name>Timestamp-to-Date for Crowd</name>
+    <description>Human-readable date tooltips for timestamp values in input fields (e.g. user attributes) for Atlassian Crowd</description>
+    <url>https://github.com/aservo/timestamp-to-date-crowd-plugin</url>
 
     <licenses>
         <license>
@@ -31,13 +30,13 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/aservo/crowd-confapi-plugin/issues</url>
+        <url>https://github.com/aservo/timestamp-to-date-crowd-plugin/issues</url>
     </issueManagement>
 
     <scm>
-        <connection>scm:git:git@github.com:aservo/crowd-confapi-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:aservo/crowd-confapi-plugin.git</developerConnection>
-        <url>https://github.com/aservo/crowd-confapi-plugin</url>
+        <connection>scm:git:git@github.com:aservo/timestamp-to-date-crowd-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:aservo/timestamp-to-date-crowd-plugin.git</developerConnection>
+        <url>https://github.com/aservo/timestamp-to-date-crowd-plugin</url>
         <tag>v@{project.version}</tag>
     </scm>
 
@@ -54,8 +53,6 @@
         <crowd.version>4.0.0</crowd.version>
         <amps.version>8.0.2</amps.version>
         <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
-        <atlassian.spring.scanner.version>2.1.11</atlassian.spring.scanner.version>
-        <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
     </properties>
 
     <dependencyManagement>
@@ -71,12 +68,6 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>com.atlassian.plugin</groupId>
-            <artifactId>atlassian-spring-scanner-annotation</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -103,29 +94,6 @@
                         <!-- Ensure plugin is spring powered -->
                         <Spring-Context>*</Spring-Context>
                     </instructions>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>com.atlassian.plugin</groupId>
-                <artifactId>atlassian-spring-scanner-maven-plugin</artifactId>
-                <version>${atlassian.spring.scanner.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>atlassian-spring-scanner</goal>
-                        </goals>
-                        <phase>process-classes</phase>
-                    </execution>
-                </executions>
-                <configuration>
-                    <scannedDependencies>
-                        <dependency>
-                            <groupId>com.atlassian.plugin</groupId>
-                            <artifactId>atlassian-spring-scanner-external-jar</artifactId>
-                        </dependency>
-                    </scannedDependencies>
-                    <verbose>false</verbose>
                 </configuration>
             </plugin>
         </plugins>

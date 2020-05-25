@@ -7,9 +7,9 @@
         <param name="plugin-logo">images/aservo.png</param>
     </plugin-info>
 
-    <web-resource key="crowd-timestamp-to-date-plugin-resources" name="crowd-timestamp-to-date-plugin Web Resources">
+    <web-resource key="timestamp-to-date-resources" name="Timestamp-to-Date Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        <resource type="download" name="timestamp-to-date-plugin.js" location="js/crowd-timestamp-to-date-plugin.js"/>
+        <resource type="download" name="timestamp-to-date.js" location="js/timestamp-to-date.js"/>
         <context>atl.admin</context>
     </web-resource>
 </atlassian-plugin>
