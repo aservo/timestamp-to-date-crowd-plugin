@@ -1,4 +1,4 @@
-name: continuous integration
+name: build
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
     - master
 
 jobs:
-  build:
+  package:
     runs-on: ubuntu-latest
     steps:
     - name: Set up JDK 11
@@ -31,7 +31,7 @@ jobs:
         name: workspace
         path: .
   deploy:
-    needs: build
+    needs: package
     if: contains(github.ref, 'ref/head/master')
     runs-on: ubuntu-latest
     steps:
