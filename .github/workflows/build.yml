@@ -23,8 +23,6 @@ jobs:
         key: timestamp-to-date-crowd-plugin-${{ hashFiles('pom.xml') }}
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Echo GitHub reference
-      run: echo ${{ github.ref }}
     - name: Build with Maven
       run: mvn package -B
     - name: Upload workspace
@@ -34,7 +32,7 @@ jobs:
         path: .
   deploy:
     needs: package
-    if: contains(github.ref, 'ref/head/master')
+    if: contains(github.ref, 'refs/heads/master')
     runs-on: ubuntu-latest
     steps:
     - name: Set up JDK 11
