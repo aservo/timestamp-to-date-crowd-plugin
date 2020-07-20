@@ -13,7 +13,7 @@
     </parent>
 
     <artifactId>timestamp-to-date-crowd-plugin</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.4</version>
     <packaging>atlassian-plugin</packaging>
 
     <name>Timestamp-to-Date for Crowd</name>
