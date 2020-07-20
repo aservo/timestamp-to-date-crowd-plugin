@@ -50,7 +50,7 @@
     </developers>
 
     <properties>
-        <crowd.version>4.0.2</crowd.version>
+        <crowd.version>4.1.0</crowd.version>
         <amps.version>8.0.2</amps.version>
         <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
     </properties>

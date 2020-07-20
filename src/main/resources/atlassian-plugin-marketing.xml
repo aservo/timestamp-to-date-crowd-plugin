@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<atlassian-plugin-marketing>
+    <compatibility>
+        <product name="crowd" min="3.2.0" max="4.1.0"/>
+    </compatibility>
+    <logo image="images/plugin-logo.jpg"/>
+    <screenshots>
+        <screenshot image="images/screenshot.png"/>
+    </screenshots>
+</atlassian-plugin-marketing>
