@@ -1,0 +1,66 @@
+name: build
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Configure dependencies cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2
+        key: timestamp-to-date-crowd-plugin-${{ hashFiles('pom.xml') }}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build with Maven
+      run: mvn package -B
+    - name: Upload workspace
+      uses: actions/upload-artifact@v2
+      with:
+        name: workspace
+        path: .
+  deploy:
+    needs: package
+    if: contains(github.ref, 'ref/head/master')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Configure dependencies cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2
+        key: timestamp-to-date-crowd-plugin-${{ hashFiles('pom.xml') }}
+    - name: Download workspace
+      uses: actions/download-artifact@v2
+      with:
+        name: workspace
+    - name: Decrypt signing key
+      env:
+        SIGN_ASC_SALT: ${{ secrets.SIGN_ASC_SALT }}
+        SIGN_ASC_KEY: ${{ secrets.SIGN_ASC_KEY }}
+        SIGN_ASC_IV: ${{ secrets.SIGN_ASC_IV }}
+      run: openssl aes-256-cbc -S ${SIGN_ASC_SALT} -K ${SIGN_ASC_KEY} -iv ${SIGN_ASC_IV} -in .github/sign.asc.enc -out .github/sign.asc -d
+    - name: Import signing key
+      run: gpg --no-tty --batch --import .github/sign.asc
+    - name: Deploy to Maven Central
+      env:
+        OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+        OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+        GPG_KEY_NAME: ${{ secrets.GPG_KEY_NAME }}
+        GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      run: mvn deploy -DskipTests -s .github/settings.xml -B
+
