@@ -10,4 +10,4 @@ This app for Atlassian Crowd transforms timestamp values in input fields (e.g. u
 
 ## Screenhot
 
-![preview](.preview.png "Timestamp-to-date translation")
+![preview](.github/.preview.png "Timestamp-to-date translation")
