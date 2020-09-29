@@ -4,8 +4,8 @@
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
         <param name="plugin-type">both</param>
-        <param name="plugin-logo">images/plugin-logo.jpg</param>
-        <param name="plugin-icon">images/plugin-icon</param>
+        <param name="plugin-logo">images/plugin-logo.png</param>
+        <param name="plugin-icon">images/plugin-icon.png</param>
         <param name="vendor-logo">images/aservo.png</param>
         <param name="atlassian-data-center-status">compatible</param>
         <param name="atlassian-data-center-compatible">true</param>
