@@ -3,10 +3,10 @@ name: build
 on:
   push:
     branches:
-    - master
+    - main
   pull_request:
     branches:
-    - master
+    - main
 
 jobs:
   package:
@@ -32,7 +32,7 @@ jobs:
         path: .
   deploy:
     needs: package
-    if: contains(github.ref, 'refs/heads/master')
+    if: contains(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
     - name: Set up JDK 11
