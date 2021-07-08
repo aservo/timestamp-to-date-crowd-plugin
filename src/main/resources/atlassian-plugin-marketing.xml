@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <atlassian-plugin-marketing>
     <compatibility>
-        <product name="crowd" min="3.2.0" max="4.1.0"/>
+        <product name="crowd" min="3.2.0" max="4.3.5"/>
     </compatibility>
     <logo image="images/plugin-logo.jpg"/>
     <screenshots>

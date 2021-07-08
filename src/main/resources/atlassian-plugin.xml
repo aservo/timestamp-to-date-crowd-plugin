@@ -7,8 +7,8 @@
         <param name="plugin-logo">images/plugin-logo.png</param>
         <param name="plugin-icon">images/plugin-icon.png</param>
         <param name="vendor-logo">images/aservo.png</param>
-        <param name="atlassian-data-center-status">compatible</param>
-        <param name="atlassian-data-center-compatible">true</param>
+<!--        <param name="atlassian-data-center-status">compatible</param>-->
+<!--        <param name="atlassian-data-center-compatible">true</param>-->
     </plugin-info>
 
     <web-resource key="timestamp-to-date-resources" name="Timestamp-to-Date Web Resources">
