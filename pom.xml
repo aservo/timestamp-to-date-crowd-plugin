@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,7 +11,7 @@
     </parent>
 
     <artifactId>timestamp-to-date-crowd-plugin</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.5</version>
     <packaging>atlassian-plugin</packaging>
 
     <name>Timestamp-to-Date for Crowd</name>
@@ -42,7 +40,7 @@
         <connection>scm:git:git@github.com:aservo/timestamp-to-date-crowd-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:aservo/timestamp-to-date-crowd-plugin.git</developerConnection>
         <url>https://github.com/aservo/timestamp-to-date-crowd-plugin</url>
-        <tag>v@{project.version}</tag>
+        <tag>v0.0.5</tag>
     </scm>
 
     <developers>
